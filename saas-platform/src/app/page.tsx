@@ -24,7 +24,7 @@ export default function Premium3DLandingPage() {
           <span className="text-xl font-black text-white tracking-tight">Apex<span className="text-cyan-400">Gen</span></span>
         </div>
         <div className="hidden md:flex gap-8 text-sm font-semibold text-neutral-400">
-          <a href="#product" className="hover:text-cyan-400 transition-colors drop-shadow-sm">The 3D Engine</a>
+          <a href="#product" className="hover:text-cyan-400 transition-colors drop-shadow-sm">The Autonomous Engine</a>
           <a href="#roi" className="hover:text-cyan-400 transition-colors drop-shadow-sm">Client ROI</a>
           <a href="#scale" className="hover:text-cyan-400 transition-colors drop-shadow-sm">Scale Now</a>
         </div>
@@ -133,7 +133,7 @@ export default function Premium3DLandingPage() {
            
            <ShieldCheck className="h-16 w-16 text-cyan-400 mx-auto mb-6 drop-shadow-[0_0_15px_rgba(6,182,212,0.5)]" />
            <h2 className="text-4xl md:text-5xl font-black text-white mb-6">Stop thinking. Start scaling.</h2>
-           <p className="text-neutral-400 max-w-xl mx-auto mb-10 text-lg">We only deploy this highly-complex 3D AI infrastructure for serious agencies ready to hit 7 figures. Click below to secure your territory.</p>
+           <p className="text-neutral-400 max-w-xl mx-auto mb-10 text-lg">We only deploy this highly-complex enterprise infrastructure for serious agencies ready to hit 7 figures. Click below to secure your territory.</p>
            
            <button className="relative inline-flex h-16 w-full sm:w-64 overflow-hidden rounded-xl p-[2px] focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black transition-transform hover:scale-105 active:scale-95">
              <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#06b6d4_0%,#3b82f6_50%,#06b6d4_100%)]" />
