@@ -1,0 +1,102 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id            String    @id @default(uuid())
+  email         String    @unique
+  passwordHash  String
+  name          String?
+  companyName   String?
+  role          Role      @default(USER)
+  stripeCustomerId String? @unique
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  leads         Lead[]
+  agents        Agent[]
+  subscriptions Subscription[]
+}
+
+model Lead {
+  id          String   @id @default(uuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  name        String
+  email       String?
+  phone       String?
+  source      String?  // e.g., "Website", "WhatsApp", "Instagram"
+  status      LeadStatus @default(NEW)
+  notes       String?
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Agent {
+  id          String   @id @default(uuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  name        String
+  type        AgentType
+  systemPrompt String   @db.Text
+  isActive    Boolean  @default(true)
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Subscription {
+  id          String   @id @default(uuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  plan        PlanType @default(FREE)
+  status      SubStatus @default(ACTIVE)
+  
+  stripeSubscriptionId String? @unique
+  stripePriceId        String?
+  stripeCurrentPeriodEnd DateTime?
+  
+  startDate   DateTime @default(now())
+  endDate     DateTime?
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum LeadStatus {
+  NEW
+  CONTACTED
+  QUALIFIED
+  PROPOSAL
+  WON
+  LOST
+}
+
+enum AgentType {
+  CHATBOT
+  VOICE
+  LEAD_GEN
+  SALES
+}
+
+enum PlanType {
+  FREE
+  PRO
+  PREMIUM
+}
+
+enum SubStatus {
+  ACTIVE
+  CANCELED
+  PAST_DUE
+}
