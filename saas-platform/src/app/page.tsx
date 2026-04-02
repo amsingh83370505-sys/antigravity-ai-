@@ -57,7 +57,7 @@ export default function Premium3DLandingPage() {
         </h1>
         
         <p className="text-lg md:text-xl text-neutral-400 max-w-2xl mb-12 leading-relaxed font-medium drop-shadow-md">
-          A bespoke, ultra-premium 3D AI architecture that scrapes hot leads, calls prospects, and books meetings autonomously.
+          An enterprise-grade autonomous system engineered to identify high-intent prospects, conduct human-like outreach, and secure qualified appointments directly into your sales pipeline.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-5 w-full sm:w-auto relative z-20">
