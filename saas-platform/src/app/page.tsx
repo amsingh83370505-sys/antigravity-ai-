@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <div style={{
       minHeight: "100vh",
-      background: "linear-gradient(135deg, #0f172a, #020617)",
+      background: "linear-gradient(135deg, #020617, #0f172a)",
       color: "white",
       display: "flex",
       flexDirection: "column",
@@ -13,41 +13,42 @@ export default function Home() {
     }}>
       
       <h1 style={{
-        fontSize: "48px",
-        fontWeight: "700",
-        marginBottom: "20px"
+        fontSize: "52px",
+        fontWeight: "800",
+        marginBottom: "16px",
+        letterSpacing: "1px"
       }}>
         🚀 LeadForge AI
       </h1>
 
       <p style={{
-        fontSize: "18px",
+        fontSize: "20px",
         maxWidth: "600px",
         marginBottom: "30px",
         color: "#94a3b8"
       }}>
-        Generate high-quality leads, automate outreach, and scale your business using AI — all in one platform.
+        Generate high-converting leads, automate outreach, and scale your business using AI.
       </p>
 
       <button style={{
-        padding: "12px 24px",
+        padding: "14px 28px",
         fontSize: "16px",
-        borderRadius: "8px",
+        borderRadius: "10px",
         border: "none",
-        background: "#6366f1",
+        background: "linear-gradient(135deg, #6366f1, #8b5cf6)",
         color: "white",
         cursor: "pointer",
-        transition: "0.3s"
+        fontWeight: "600"
       }}>
-        Get Started
+        Start Generating Leads
       </button>
 
       <div style={{
-        marginTop: "40px",
+        marginTop: "50px",
         fontSize: "14px",
         color: "#64748b"
       }}>
-        Trusted by modern agencies • Built for growth 🚀
+        Built for agencies • Designed for growth 💰
       </div>
 
     </div>
